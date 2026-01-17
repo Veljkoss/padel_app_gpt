@@ -1,0 +1,222 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background-color: #f6f4f1;
+  color: #1f1f1f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 0 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3.5rem 8vw 2rem;
+  background: linear-gradient(135deg, #f1efe6 0%, #e9f4ee 100%);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7f8656;
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 1rem;
+}
+
+.subhead {
+  font-size: 1.1rem;
+  max-width: 32rem;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  font: inherit;
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.4rem;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #1f6f43;
+  color: white;
+  box-shadow: 0 10px 24px rgba(31, 111, 67, 0.25);
+}
+
+button.ghost {
+  background: white;
+  border: 1px solid #d7d3cd;
+}
+
+button.full {
+  width: 100%;
+}
+
+.hero-card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);
+  display: grid;
+  gap: 1rem;
+}
+
+.match-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0ede7;
+  font-size: 0.95rem;
+}
+
+.match-detail span {
+  color: #7a776f;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 8vw;
+}
+
+.card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 14px 28px rgba(33, 38, 44, 0.06);
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.team {
+  background: #f7f6f2;
+  border-radius: 1.2rem;
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.team-label {
+  margin: 0;
+  color: #8a877f;
+}
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.note {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 110px;
+  border-radius: 1rem;
+  border: 1px solid #d7d3cd;
+  padding: 0.9rem;
+  resize: vertical;
+  font: inherit;
+}
+
+.schedule-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.schedule-grid article {
+  background: #f7f6f2;
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+}
+
+.wheel {
+  display: grid;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.wheel-result {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  background: #f1efe6;
+}
+
+.wheel-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.wheel-list li {
+  background: #f7f6f2;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+}
+
+footer {
+  text-align: center;
+  color: #8a877f;
+  padding-top: 3rem;
+}
+
+@media (max-width: 640px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
