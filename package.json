@@ -1,0 +1,11 @@
+{
+  "name": "padel-matchup-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Weekly padel matchup hub",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}
