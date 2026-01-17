@@ -10,13 +10,18 @@
     <header class="hero">
       <div>
         <p class="eyebrow">Weekly Padel Matchup</p>
-        <h1>Keep score, plan the next rally, and add a little chaos.</h1>
+        <h1>Bring the vibes, keep the score, and make it a little ridiculous.</h1>
         <p class="subhead">
-          Track live games, confirm the upcoming match, and spin for fun challenges with your padel crew.
+          Your padel clubhouse for weekly smack talk, match planning, snack drafts, and live scoring.
         </p>
         <div class="hero-actions">
-          <button class="primary" id="resetAll">Reset all</button>
-          <button class="ghost" id="saveNote">Save note</button>
+          <button class="primary" id="resetAll">Reset the chaos</button>
+          <button class="ghost" id="saveNote">Save a hot take</button>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">🎾 Rally ready</span>
+          <span class="badge">🍹 Post-game snack draft</span>
+          <span class="badge">🎉 Vibes: elite</span>
         </div>
       </div>
       <div class="hero-card">
@@ -33,6 +38,10 @@
           <span>Players</span>
           <strong id="matchPlayers">You + 3 friends</strong>
         </div>
+        <div class="match-detail">
+          <span>Countdown</span>
+          <strong id="matchCountdown">Loading hype...</strong>
+        </div>
         <button class="primary full" id="updateMatch">Update match</button>
       </div>
     </header>
@@ -41,7 +50,7 @@
       <section class="card" aria-labelledby="scoreboard-title">
         <div class="section-header">
           <h2 id="scoreboard-title">Scoreboard</h2>
-          <p>Keep tabs on sets and games for each duo.</p>
+          <p>Keep tabs on sets and games for each duo. Winner gets first snack pick.</p>
         </div>
         <div class="scoreboard">
           <div class="team">
@@ -87,7 +96,7 @@
         </div>
         <div class="note">
           <label for="matchNotes">Match notes</label>
-          <textarea id="matchNotes" placeholder="Write down highlights, who brings the balls, or a rematch plan."></textarea>
+          <textarea id="matchNotes" placeholder="Write down highlights, who brings the balls, or the next trash-talk plan."></textarea>
         </div>
       </section>
 
@@ -112,6 +121,35 @@
         </div>
       </section>
 
+      <section class="card" aria-labelledby="hype-title">
+        <div class="section-header">
+          <h2 id="hype-title">Matchday Hype</h2>
+          <p>Click for a random hype boost and queue up the snack draft.</p>
+        </div>
+        <div class="hype-grid">
+          <div class="hype-card">
+            <p class="hype-label">Hype generator</p>
+            <div class="hype-display" id="hypeDisplay">Tap for instant swagger.</div>
+            <button class="primary" id="generateHype">Drop the hype</button>
+          </div>
+          <div class="hype-card">
+            <p class="hype-label">Snack draft order</p>
+            <ol class="snack-list" id="snackDraft">
+              <li>You</li>
+              <li>Friend A</li>
+              <li>Friend B</li>
+              <li>Friend C</li>
+            </ol>
+            <button class="ghost" id="shuffleSnacks">Shuffle draft</button>
+          </div>
+          <div class="hype-card">
+            <p class="hype-label">Playlist vibe</p>
+            <div class="playlist" id="playlistName">Padel Pump-Up Mix</div>
+            <button class="ghost" id="shufflePlaylist">Switch the vibe</button>
+          </div>
+        </div>
+      </section>
+
       <section class="card" aria-labelledby="wheel-title">
         <div class="section-header">
           <h2 id="wheel-title">Spin the Wheel</h2>
@@ -128,6 +166,20 @@
             <li>Winner picks post-game snack</li>
           </ul>
         </div>
+      </section>
+
+      <section class="card" aria-labelledby="mvp-title">
+        <div class="section-header">
+          <h2 id="mvp-title">MVP of the Week</h2>
+          <p>Vote for the clutch moments hero.</p>
+        </div>
+        <div class="mvp-grid">
+          <button class="ghost mvp-option" data-player="You">You</button>
+          <button class="ghost mvp-option" data-player="Friend A">Friend A</button>
+          <button class="ghost mvp-option" data-player="Friend B">Friend B</button>
+          <button class="ghost mvp-option" data-player="Friend C">Friend C</button>
+        </div>
+        <p class="mvp-result" id="mvpResult">Cast a vote to crown the MVP.</p>
       </section>
     </main>
 
